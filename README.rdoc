@@ -16,6 +16,4 @@ Assets(extra)
 
 * Select2
 
-* Deployment instructions
-
 Please feel free to submit an issue if you get one.
