@@ -1,0 +1,15 @@
+<%= render 'nav' %>
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>First name:</strong>
+  <%= @writer.first_name %>
+</p>
+
+<p>
+  <strong>Last name:</strong>
+  <%= @writer.last_name %>
+</p>
+
+<%= link_to 'Edit', edit_writer_path(@writer) %> |
+<%= link_to 'Back', writers_path %>
