@@ -42,6 +42,11 @@
                 <%= f.label :title %>
                 <%= f.text_field :title_cont %>
               </div><br>
+  
+              <div class="input-control select" style="margin-top: 20px; width: 200px;" data-role="input">
+                <%= f.label :genre_id %>
+                <%= f.collection_select :genres_names_cont, Genre.all, :name, :name, {include_blank true}, {} %>
+              </div><br>
 
               <div class="actions">
                 <%= f.submit %> | <%= link_to "Clear", movies_path, class: 'button danger' %>
