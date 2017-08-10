@@ -92,18 +92,18 @@ $(document).ready(function() {
   <div class="input-control select full-size" style="margin-top: 20px;" data-role="input">
     <%= f.label :genre_id %>
     <% if @movie.persisted? %>
-    <%= f.collection_select :genre_list, Genre.all, :id, :name, {}, {multiple: true, id: "movie_genre_id", value: f.object.genre_list.to_s} %>
+    <%= f.collection_select :genre_list, Genre.all, :name, :name, {}, {multiple: true, id: "movie_genre_id", value: f.object.genre_list.to_s} %>
     <% else %>
-    <%= f.collection_select :genre_list, Genre.all, :id, :name, {}, {multiple: true, id: "movie_genre_id"} %>
+    <%= f.collection_select :genre_list, Genre.all, :name, :name, {}, {multiple: true, id: "movie_genre_id"} %>
     <% end %>
   </div>
 
   <div class="input-control select full-size" style="margin-top: 20px;" data-role="input">
     <%= f.label :writer_id %>
     <% if @movie.persisted? %>
-    <%= f.collection_select :writer_list, Writer.all, :id, :get_full_name, {}, {multiple: true, id: "movie_writer_id", value: f.object.writer_list.to_s} %>
+    <%= f.collection_select :writer_list, Writer.all, :get_full_name, :get_full_name, {}, {multiple: true, id: "movie_writer_id", value: f.object.writer_list.to_s} %>
     <% else %>
-    <%= f.collection_select :writer_list, Writer.all, :id, :get_full_name, {}, {multiple: true, id: "movie_writer_id"} %>
+    <%= f.collection_select :writer_list, Writer.all, :get_full_name, :get_full_name, {}, {multiple: true, id: "movie_writer_id"} %>
     <% end %>
   </div>
 
